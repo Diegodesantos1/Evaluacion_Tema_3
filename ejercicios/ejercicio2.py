@@ -25,3 +25,10 @@ def determinante(matriz):
         determinante -= matriz[0][i] * matriz[1][(i+2)%3] * matriz[2][(i+1)%3]
     return determinante
 
+
+matriz = crear_matriz()
+matriz = rellenar_matriz(matriz)
+mostrar_matriz(matriz)
+determinante(matriz)
+determinante = determinante(matriz)
+print(f"el determinante es {determinante}")
