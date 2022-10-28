@@ -22,3 +22,17 @@ def ordenar_largo():
     print(f"\n\nLas naves ordenadas por largo son {naves_largo}")
 
 ordenar_largo()
+
+def halcon_milenario():
+    for row in star_naves:
+        if row['Name'] == "Millennium Falcon":
+            print(f"\n\nLa información del Millenium Falcon es {row}")
+
+halcon_milenario()
+
+def estrella_muerte():
+    for row in star_naves:
+        if row['Name'] == "Death Star":
+            print(f"\n\nLa información de la Death Star es {row}")
+
+estrella_muerte(()
