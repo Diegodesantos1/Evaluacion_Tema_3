@@ -4,15 +4,12 @@ with open('star_naves.csv', 'r') as file:
     reader3 = csv.DictReader(file, delimiter=';')
     star_naves = list(reader3)
 
-
 def ordenar_naves():
     naves = []
     for row in star_naves:
         naves.append(row['Name'])
     naves.sort()
     print(f"\n\nLas naves ordenadas por nombre son {naves}")
-
-ordenar_naves()
 
 def ordenar_largo():
     naves_largo = []
@@ -21,21 +18,15 @@ def ordenar_largo():
     naves_largo.sort() ; naves_largo.reverse()
     print(f"\n\nLas naves ordenadas por largo son {naves_largo}")
 
-ordenar_largo()
-
 def halcon_milenario():
     for row in star_naves:
         if row['Name'] == "Millennium Falcon":
             print(f"\n\nLa información del Millenium Falcon es {row}")
 
-halcon_milenario()
-
 def estrella_muerte():
     for row in star_naves:
         if row['Name'] == "Death Star":
             print(f"\n\nLa información de la Death Star es {row}")
-
-estrella_muerte()
 
 def cinco_naves():
     naves = []
@@ -44,17 +35,12 @@ def cinco_naves():
     naves.sort() ; naves.reverse()
     print(f"\n\nLas cinco naves con mayor cantidad de pasajeros son {naves[:5]}")
 
-cinco_naves()
-
 def mayor_tripulacion():
     naves = []
     for row in star_naves:
         naves.append(row['Name'] + " " + row['Crew'])
     naves.sort() ; naves.reverse()
     print(f"\n\nLa nave que requiere mayor cantidad de tripulación es {naves[0]}")
-
-mayor_tripulacion()
-
 
 def comienzan_at():
     at = []
@@ -63,16 +49,12 @@ def comienzan_at():
             at.append(row['Name'])
     print(f"\n\nLas naves que comienzan con AT son {at}")
 
-comienzan_at()
-
 def seis_pasajeros():
     pasajeros = []
     for row in star_naves:
         if int(row['Passengers']) >= 6:
             pasajeros.append(row['Name'])
     print(f"\n\nLas naves que pueden llevar seis o más pasajeros son {pasajeros}")
-
-seis_pasajeros()
 
 def grande():
     death_star = []
@@ -81,8 +63,6 @@ def grande():
             death_star.append(row)
     print(f"\n\nLa información de la nave con mayor largo es {death_star}")
 
-grande()
-
 def pequeño():
     sp_wp = []
     for row in star_naves:
@@ -90,4 +70,17 @@ def pequeño():
             sp_wp.append(row)
     print(f"\n\nLa información de la nave con menor largo es {sp_wp}")
 
-pequeño()
+
+def ejercicio3():
+    ordenar_naves()
+    ordenar_largo()
+    halcon_milenario()
+    estrella_muerte()
+    cinco_naves()
+    mayor_tripulacion()
+    comienzan_at()
+    seis_pasajeros()
+    grande()
+    pequeño()
+
+ejercicio3()
