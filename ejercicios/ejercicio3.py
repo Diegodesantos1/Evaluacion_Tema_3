@@ -54,3 +54,13 @@ def mayor_tripulacion():
     print(f"\n\nLa nave que requiere mayor cantidad de tripulación es {naves[0]}")
 
 mayor_tripulacion()
+
+
+def comienzan_at():
+    at = []
+    for row in star_naves:
+        if row['Name'].startswith("AT"):
+            at.append(row['Name'])
+    print(f"\n\nLas naves que comienzan con AT son {at}")
+
+comienzan_at()
