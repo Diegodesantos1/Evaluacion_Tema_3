@@ -15,5 +15,4 @@ def ejercicio5():
     mensaje = input('Ingrese el mensaje a encriptar: ')
     encriptacion = Encriptacion(mensaje)
     print(encriptacion.encriptar())
-
 ejercicio5()

@@ -8,9 +8,7 @@ def hanoi(num, origen, destino, auxiliar):
 
 def ejercicio1():
     numero =int(input("ingrese el numero de discos:"))
-    if numero > 10:
-        numero = int(input("ingrese el número de discos"))
-    else:
-        hanoi(numero, "origen", "destino", "auxiliar")
-
+    while numero > 10:
+            numero = int(input("ingrese el número de discos"))
+    hanoi(numero, "origen", "destino", "auxiliar")
 ejercicio1()
